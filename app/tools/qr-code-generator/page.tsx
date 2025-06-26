@@ -2,12 +2,6 @@
 import { useState, useEffect, useRef } from 'react';
 import QRCode from 'qrcode';
 
-export const metadata = {
-  title: 'Free QR Code Generator - ZenoToolBox',
-  description: 'Create QR codes for URLs or text instantly with ZenoToolBox\'s free QR code generator.',
-  keywords: 'QR code generator, free QR code, online QR code tool',
-};
-
 export default function QRCodeGenerator() {
   const [input, setInput] = useState('');
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -32,6 +26,14 @@ export default function QRCodeGenerator() {
       />
       <div className="text-center">
         <canvas ref={canvasRef}></canvas>
+      </div>
+      <div className="mt-6">
+        <h3 className="text-xl font-semibold">Related Tools</h3>
+        <a href="/tools/word-counter" className="text-accent">Word Counter</a>
+      </div>
+    </div>
+  );
+}  <canvas ref={canvasRef}></canvas>
       </div>
       <div className="mt-6">
         <h3 className="text-xl font-semibold">Related Tools</h3>
